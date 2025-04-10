@@ -25,7 +25,7 @@ session_start();
         <input type="text" name="qualifica_societa" placeholder="Qualifica e societa' o ente di appartenenza">
         <input type="text" name="username" placeholder="username"> <br> <br>
         <input type="text" name="password" placeholder="password">  <br> <br>
-        <input type="submit" value="Registra">
+        <input type="submit" value="Entra">
     </form>
     <a href="profile.php">Torna alla Home</a>
     </center>
