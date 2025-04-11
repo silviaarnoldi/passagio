@@ -23,9 +23,7 @@ session_start();
         <input type="text" name="cognome" placeholder="cognome"> <br> <br>
         <input type="text" name="persona_da_visitare" placeholder="persona da visitare"> <br> <br>
         <input type="text" name="qualifica_societa" placeholder="Qualifica e societa' o ente di appartenenza">
-        <input type="text" name="username" placeholder="username"> <br> <br>
-        <input type="text" name="password" placeholder="password">  <br> <br>
         <input type="submit" value="Entra">
     </form>
-    <a href="profile.php">Torna alla Home</a>
+    <a href="home.html">Torna alla Home</a>
     </center>
