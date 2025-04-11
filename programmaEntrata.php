@@ -16,14 +16,17 @@ session_start();
     <body>
         <center>
             <h1>ENTRATA UTENTE:</h1>
-           
-            <br>
             <form action="entratacontroller.php" method="post">
-        <input type="text" name="nome" placeholder="nome"> <br> <br>
-        <input type="text" name="cognome" placeholder="cognome"> <br> <br>
-        <input type="text" name="persona_da_visitare" placeholder="persona da visitare"> <br> <br>
-        <input type="text" name="qualifica_societa" placeholder="Qualifica e societa' o ente di appartenenza">
-        <input type="submit" value="Entra">
+            <h3>Nome:</h3>
+            <input type="text" name="nome" placeholder="nome"> <br> 
+            <h3>Cognome:</h3>
+            <input type="text" name="cognome" placeholder="cognome"> <br> 
+            <h3>Persona da visitare:</h3>
+            <input type="text" name="persona_da_visitare" placeholder="persona da visitare"> <br>
+            <h3>Qualifica e societa' o ente di appartenenza:</h3>
+            <input type="text" name="qualifica_societa" placeholder="Qualifica e societa' o ente di appartenenza">
+        <br> <br><input type="submit" value="Entra">
     </form>
+    <br> 
     <a href="home.html">Torna alla Home</a>
     </center>
