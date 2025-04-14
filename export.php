@@ -22,18 +22,51 @@ $headers = [];
 while ($row = $result->fetch_assoc()) {
     $headers[] = $row['Field'];
 }
-fputcsv($file, $headers);
+fwrite($file, implode(' - ', $headers) . "\n");
 
 // Dati
 $result = $connessione->query("SELECT * FROM $tablename");
 while ($row = $result->fetch_assoc()) {
-    fputcsv($file, $row);
+    fwrite($file, implode(' - ', $row) . "\n");
 }
 
 fclose($file);
 $connessione->close();
-
-// Reindirizza al file per download
-header("Location: exports/" . $filename);
-exit;
 ?>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>File Esportato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .button {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>Esportazione completata!</h2>
+    <p>Il file CSV è stato salvato correttamente.</p>
+    <!-- Bottone per tornare alla home -->
+    <p>
+        <a href="index.php" class="button">Torna alla Home</a>
+    </p>
+    </center>
+</body>
+</html>
