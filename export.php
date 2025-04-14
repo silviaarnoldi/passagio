@@ -1,37 +1,37 @@
 <?php
+session_start();
+header("Content-Type: application/vnd.ms-excel");
+header("Content-Disposition: attachment; filename=dati_tabella_" . date("Ymd") . ".xls");
+header("Pragma: no-cache");
+header("Expires: 0");
+
 $tablename = "passagio";
 include "connessione.php";
-session_start();
 
-// Crea cartella se non esiste
-$dir = __DIR__ . "/exports/";
-if (!file_exists($dir)) {
-    mkdir($dir, 0777, true);
-}
-
-// Nome file
-$filename = "dati_tabella_" . date("Ymd_His") . ".csv";
-$filepath = $dir . $filename;
-
-// Scrive su file
-$file = fopen($filepath, "w");
+// Crea l’HTML come tabella Excel
+echo '<table border="1">';
 
 // Intestazioni
 $result = $connessione->query("SHOW COLUMNS FROM $tablename");
-$headers = [];
+echo "<tr>";
 while ($row = $result->fetch_assoc()) {
-    $headers[] = $row['Field'];
+    echo "<th>" . htmlspecialchars($row['Field']) . "</th>";
 }
-fwrite($file, implode(' - ', $headers) . "\n");
+echo "</tr>";
 
 // Dati
 $result = $connessione->query("SELECT * FROM $tablename");
 while ($row = $result->fetch_assoc()) {
-    fwrite($file, implode(' - ', $row) . "\n");
+    echo "<tr>";
+    foreach ($row as $cell) {
+        echo "<td>" . htmlspecialchars($cell) . "</td>";
+    }
+    echo "</tr>";
 }
+echo "</table>";
 
-fclose($file);
 $connessione->close();
+exit; // Ferma lo script qui per evitare che venga visualizzato altro HTML
 ?>
 
 <!DOCTYPE html>
@@ -39,25 +39,7 @@ $connessione->close();
 <head>
     <meta charset="UTF-8">
     <title>File Esportato</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-        }
-        .button {
-            background-color: #008CBA;
-            border: none;
-            color: white;
-            padding: 12px 24px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <center>

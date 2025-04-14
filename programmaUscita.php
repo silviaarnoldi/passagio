@@ -23,12 +23,20 @@ $risultato = $connessione->query($query);
 <head>
     <meta charset="UTF-8">
     <title>Utenti presenti (ultime 8 ore)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style2.css">
+    <img src="img/logo2.png" width="200" height="80"> 
+    <script>
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 </head>
 <body>
 <center>
     <h1>Utenti presenti (entrati nelle ultime 8 ore)</h1>
 
-    <table border="1" cellpadding="10">
+    <table>
         <tr>
             <th>Nome</th>
             <th>Cognome</th>
@@ -64,5 +72,6 @@ $risultato = $connessione->query($query);
     <br>
     <a href="home.html">Torna alla Home</a>
 </center>
+<button onclick="scrollToTop()" class="scroll-to-top">↑ Torna su</button>
 </body>
 </html>

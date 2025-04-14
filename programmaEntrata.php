@@ -6,12 +6,11 @@ session_start();
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <!--
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     Collegamento al tuo file CSS 
-    <link rel="stylesheet" href="CSS/stylehome.css">
-    <img src="img/logo.png" width="250" height="100"> -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <img src="img/logo2.png" width="200" height="80"> 
 </head>
     <body>
         <center>
@@ -29,4 +28,14 @@ session_start();
     </form>
     <br> 
     <a href="home.html">Torna alla Home</a>
+    
+    <br>
+    <br>
+    <p>
+        Questo sito rispetta la tua privacy. I tuoi dati personali sono trattati con attenzione e non saranno condivisi senza il tuo consenso.
+    </p>
+    <p>
+        Per ulteriori informazioni, consulta la nostra <a href="privacy.html">Informativa sulla Privacy</a>.
+    </p>
     </center>
+    </body>

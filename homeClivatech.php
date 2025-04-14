@@ -12,15 +12,19 @@ $risultato = $connessione->query($query);
 <head>
     <meta charset="UTF-8">
     <title>Tabella Utenti</title>
-    <form method="post" action="export.php">
-    <button type="submit">Esporta dati</button>
-</form>
+    <a href="home.html"><img src="img/logo2.png" width="200" height="80"> </a>
+    <link rel="stylesheet" href="CSS/style2.css">
+    <script>
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 </head>
 <body>
 <center>
-    <h1>Lista di tutti gli utenti</h1>
+<h1>Lista di tutti gli utenti <form method="post" action="export.php"><button type="submit">Esporta dati</button></form></h1>  
 
-    <table border="1" cellpadding="10">
+    <table>
         <tr>
             <th>ID</th>
             <th>Nome</th>
@@ -29,6 +33,7 @@ $risultato = $connessione->query($query);
             <th>Persona da Visitare</th>
             <th>Data Oggi</th>
             <th>Ora Entrata</th>
+            <th>Ora Uscita</th>
         </tr>
 
         <?php
@@ -43,6 +48,7 @@ $risultato = $connessione->query($query);
                 echo "<td>" . htmlspecialchars($riga['PERSONA_DA_VISITARE']) . "</td>";
                 echo "<td>" . $riga['DATAOGGI'] . "</td>";
                 echo "<td>" . $riga['ORAENTRATA'] . "</td>";
+                echo "<td>" . $riga['ORAUSCITA'] . "</td>";
                 echo "</tr>";
             }
         } else {
@@ -50,9 +56,11 @@ $risultato = $connessione->query($query);
         }
         ?>
     </table>
-
+    
     <br>
-    <a href="home.html">Torna alla Home</a>
+    
 </center>
+<button onclick="scrollToTop()" class="scroll-to-top">↑ Torna su</button>
+
 </body>
 </html>

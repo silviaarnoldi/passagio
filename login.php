@@ -3,8 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Collegamento al tuo file CSS 
-        <link rel="stylesheet" href="CSS/stylehome.css">-->
+        <link rel="stylesheet" href="CSS/style.css">
     </head>
 <body>
     <br>
@@ -19,7 +18,8 @@
         <input type="text" name="username" placeholder="username"><br> <br>
         <input type="password" name="password" placeholder="password"><br> <br>
         <input type="submit" value="Login">
-    </form></center>
+    </form>
+    <a href="home.html">Torna alla Home</a></center>
     <?php
         if(isset($_GET['error'])){
             echo $_GET['error'];
