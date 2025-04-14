@@ -12,7 +12,7 @@ $risultato = $connessione->query($query);
 <head>
     <meta charset="UTF-8">
     <title>Tabella Utenti</title>
-    <a href="home.html"><img src="img/logo2.png" width="200" height="80"> </a>
+    <a href="home.html"><img src="img/logo2.png" width="200" height="53"> </a>
     <link rel="stylesheet" href="CSS/style2.css">
     <script>
 function scrollToTop() {

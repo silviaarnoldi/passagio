@@ -248,3 +248,81 @@ th, td {
         width: 100%;
     }
 }
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="number"],
+    textarea {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    table {
+        width: 90%;
+    }
+
+    .images div {
+        width: 100%;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        right: 10px;
+    }
+}
+
+/* Smartphone */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"],
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        right: 10px;
+        font-size: 12px;
+    }
+
+    .images {
+        flex-direction: column;
+    }
+
+    .images div {
+        width: 100%;
+    }
+}

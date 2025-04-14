@@ -25,7 +25,7 @@ $risultato = $connessione->query($query);
     <title>Utenti presenti (ultime 8 ore)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style2.css">
-    <img src="img/logo2.png" width="200" height="80"> 
+    <img src="img/logo2.png" width="200" height="53"> 
     <script>
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
