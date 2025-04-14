@@ -12,6 +12,9 @@ $risultato = $connessione->query($query);
 <head>
     <meta charset="UTF-8">
     <title>Tabella Utenti</title>
+    <form method="post" action="export.php">
+    <button type="submit">Esporta dati</button>
+</form>
 </head>
 <body>
 <center>
